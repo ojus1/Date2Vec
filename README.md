@@ -62,6 +62,8 @@ optim = 'adam'
 os.system("mkdir ./models/d2v_{}".format(act))
 configure("logs/d2v_{}".format(act))
 
+# k is the embedding dimension
+# act is the periodic activation function for hidden layer
 m = Date2Vec(k=64, act=act)
 exp = Date2VecExperiment(m, act, lr=0.001, cuda=True, optim=optim)
 exp.train()
