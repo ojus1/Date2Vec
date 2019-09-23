@@ -75,10 +75,15 @@ exp.train()
 ##### Training Statistics:
 
 1. Training Loss (MSE v/s Batches)
+
 ![train loss img](./assets/train.png "Training Loss")
+
 2. Validation Loss, first set (MSE v/s Validation Steps)
+
 ![val1 loss img](./assets/val1.png "Validation Loss 1")
+
 3. Validation Loss, second set (MSE v/s Validation Steps)
+
 ![val2 loss img](./assets/val2.png "Validation Loss 2")
 
 ## TODO
