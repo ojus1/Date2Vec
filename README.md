@@ -9,7 +9,7 @@ Autoencoder Model's layers are based on Cosine Activation function from "Time2Ve
 
 ### Embeddings from pretrained model
 
-Import Date2VecConvert Class from Model.py and use the object's __call__ method to get embedding.
+Import Date2VecConvert Class from Model.py and use the object's `__call__` method to get embedding.
 
 #### Example
 
