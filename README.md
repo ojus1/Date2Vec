@@ -82,7 +82,7 @@ exp.train()
 
 ![val1 loss img](./assets/val1.png "Validation Loss 1")
 
-3. Validation Loss, second set (MSE v/s Validation Steps)
+3. Validation Loss, second set (MAE v/s Validation Steps)
 
 ![val2 loss img](./assets/val2.png "Validation Loss 2")
 
