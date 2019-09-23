@@ -13,7 +13,8 @@ Import Date2VecConvert Class from Model.py and use the object's __call__ method 
 
 #### Example
 
-`from Model import Date2VecConvert
+```python
+from Model import Date2VecConvert
 import torch
 
 # Date2Vec embedder object
@@ -37,7 +38,8 @@ Output:
           0.7904,  -0.6719,   0.6717,  -0.0115,  -0.4214,  -0.6423,   0.9074,
          -0.5311,   0.7155,   0.9098,  -0.6888,   0.8095,  -0.2459,   0.9649,
           0.4060,   0.9995,   0.6519,   0.9981,  -0.0737,  -0.1282,   0.1721,
-         -0.8690]) torch.Size([64])`
+         -0.8690]) torch.Size([64])
+```
 
 ### Training custom models
 
@@ -48,7 +50,8 @@ Output:
 
 #### Example
 
-`from Model import Date2Vec
+```python
+from Model import Date2Vec
 from Data import NextDateDataset, TimeDateDataset
 import torch
 from torch.utils.data import DataLoader
@@ -64,7 +67,8 @@ configure("logs/d2v_{}".format(act))
 m = Date2Vec(k=64, act=act)
 #m = torch.load("models/sin/nextdate_11147_23.02417500813802.pth")
 exp = Date2VecExperiment(m, act, lr=0.001, cuda=True, optim=optim)
-exp.train()`
+exp.train()
+```
 
 ##### Training Statistics:
 
