@@ -13,8 +13,7 @@ Import Date2VecConvert Class from Model.py and use the object's __call__ method 
 
 #### Example
 
-`
-from Model import Date2VecConvert
+`from Model import Date2VecConvert
 import torch
 
 # Date2Vec embedder object
@@ -27,11 +26,9 @@ x = torch.Tensor([[13, 23, 30, 2019, 7, 23]]).float()
 # Get embeddings
 embed = d2v(x)
 
-print(embed, embed.shape)
-`
+print(embed, embed.shape)`
 Output:
-`
-tensor([  1.5502,  -3.2361,  -1.6112,  -5.6936,  -1.5411,  -2.2469,  -2.9789,
+`tensor([  1.5502,  -3.2361,  -1.6112,  -5.6936,  -1.5411,  -2.2469,  -2.9789,
           2.2282,   1.3976,  -0.7998,  -0.5832,   0.8173,   7.9928,  -1.7402,
          -0.4342,   2.2130, -10.9533,   1.2677,   0.0374,   0.0504,  -1.1214,
          -1.0377,   1.3404,  -5.4184,  -0.1232,  -2.2410,  -3.4778,   1.8836,
@@ -40,8 +37,7 @@ tensor([  1.5502,  -3.2361,  -1.6112,  -5.6936,  -1.5411,  -2.2469,  -2.9789,
           0.7904,  -0.6719,   0.6717,  -0.0115,  -0.4214,  -0.6423,   0.9074,
          -0.5311,   0.7155,   0.9098,  -0.6888,   0.8095,  -0.2459,   0.9649,
           0.4060,   0.9995,   0.6519,   0.9981,  -0.0737,  -0.1282,   0.1721,
-         -0.8690]) torch.Size([64])
-`
+         -0.8690]) torch.Size([64])`
 
 ### Training custom models
 
@@ -52,8 +48,7 @@ tensor([  1.5502,  -3.2361,  -1.6112,  -5.6936,  -1.5411,  -2.2469,  -2.9789,
 
 #### Example
 
-`
-from Model import Date2Vec
+`from Model import Date2Vec
 from Data import NextDateDataset, TimeDateDataset
 import torch
 from torch.utils.data import DataLoader
@@ -69,8 +64,7 @@ configure("logs/d2v_{}".format(act))
 m = Date2Vec(k=64, act=act)
 #m = torch.load("models/sin/nextdate_11147_23.02417500813802.pth")
 exp = Date2VecExperiment(m, act, lr=0.001, cuda=True, optim=optim)
-exp.train()
-`
+exp.train()`
 
 ##### Training Statistics:
 
