@@ -55,10 +55,8 @@ tensor([  1.5502,  -3.2361,  -1.6112,  -5.6936,  -1.5411,  -2.2469,  -2.9789,
 ```python
 from Model import Date2Vec
 from Data import NextDateDataset, TimeDateDataset
+from Experiment import Date2VecExperiment
 import torch
-from torch.utils.data import DataLoader
-from sklearn.metrics import mean_absolute_error, mean_squared_error
-from tensorboard_logger import configure, log_value
 import os
 
 act = 'cos'
@@ -70,6 +68,7 @@ m = Date2Vec(k=64, act=act)
 #m = torch.load("models/sin/nextdate_11147_23.02417500813802.pth")
 exp = Date2VecExperiment(m, act, lr=0.001, cuda=True, optim=optim)
 exp.train()
+exp.test()
 ```
 
 ##### Training Statistics:
