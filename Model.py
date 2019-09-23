@@ -5,8 +5,9 @@ class Date2VecConvert:
     def __init__(self, model_path="./d2v_model/d2v_98291_17.169918439404636.pth"):
         self.model = torch.load(model_path, map_location='cpu').eval()
     
-    def convert(self, x):
-        return self.model.encode(torch.Tensor(x).unsqueeze(0)).squeeze(0).cpu()
+    def __call__(self, x):
+        with torch.no_grad():
+            return self.model.encode(torch.Tensor(x).unsqueeze(0)).squeeze(0).cpu()
 
 class Date2Vec(nn.Module):
     def __init__(self, k=32, act="sin"):
